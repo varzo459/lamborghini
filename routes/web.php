@@ -14,10 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::redirect('/', '/home')->name('home');
-
+Route::redirect('/', '/register')->name('home');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');

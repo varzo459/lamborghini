@@ -11,7 +11,7 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('register');
+        return view('user/register');
     }
 
     public function store(RegisterRequest $request)
@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $user = User::create($req);
         if($user) {
             Auth::Login($user);
-            return redirect()->route('login');
+            return redirect()->route('user/login');
         } else {
             abort(400);
         }

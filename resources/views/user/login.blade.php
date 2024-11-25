@@ -6,7 +6,7 @@
 <section class="row justify-content-center">
     <div class="col-3 bg-black p-4 rounded-3 m-4">
         <h3 class="text-white mb-3">@yield('title')</h3>
-        <form>
+        <form action="{{ route('login.store') }}" method="POST">
             <div class="form-floating mb-2">
               <input type="text" name="login" class="form-control" id="floatingInput" placeholder="Login">
               <label for="floatingInput">Логин</label>
